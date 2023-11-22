@@ -1,0 +1,51 @@
+﻿<Window x:Class="DoNotHarm.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoNotHarm"
+        mc:Ignorable="d"
+         KeyDown="Window_KeyDown"
+        Title="OrderWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1">
+                <Label HorizontalAlignment="Center" FontSize="22">Формирование заказа</Label>
+                <Label x:Name="NameCase" HorizontalAlignment="Center" FontSize="22"></Label>
+            </StackPanel>
+            <Button Grid.Column="2" Width="100" Height="40" Click="CloseButton_Click">Закрыть</Button>
+        </Grid>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Left" MinWidth="200">
+            <StackPanel>
+                <Label>Штрих-код</Label>
+                <TextBox x:Name="BarcodeTextBox"></TextBox>
+                <Label>Пользователи</Label>
+                <StackPanel x:Name="UsersStackPanel">
+                
+                </StackPanel>
+                <Button Width="30" Height="30" Click="AddUserButton_Click">+</Button>
+                <Label>Услуги</Label>
+                <StackPanel x:Name="ServicesStackPanel">
+
+                </StackPanel>
+                <Button Width="30" Height="30" Click="AddServiceButton_Click">+</Button>
+            </StackPanel>
+        </ScrollViewer>
+
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.Row="2">
+            <Button Click="SaveButton_Click" Width="100" Height="40">Ок</Button>
+            <Label Grid.Column="1" FontSize="22">Или нажмите Enter</Label>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,58 @@
+﻿<Window x:Class="DoNotHarm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoNotHarm"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        FontFamily="Comic Sans MS"
+        FontSize="14"
+        Title="MainWindow" 
+        Height="450" 
+        Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FF76E381">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/Properties/Logo.png"
+                   Width="35"
+                   Margin="5"/>
+            <Image Source="/Properties/Logo.png"
+                   Width="35"
+                   Margin="5"/>
+            <TextBlock x:Name="TitleTB"
+                Grid.Column="1"
+                Text="Главный экран"
+                FontSize="16"
+                VerticalAlignment="Center"
+                Padding="10 0"
+                />
+            <Button x:Name="ExitBTN"
+                    Grid.Column="2"
+                    Content="Выход"
+                    FontSize="16"
+                    Background="#FF498C4E"
+                    Padding="10, 5"
+                    Margin="10, 5"
+                    Click="ExitBTN_Click"/>
+        </Grid>
+        <Image HorizontalAlignment="Right" 
+               Height="35" 
+               x:Name="PhotoUserImage" 
+               VerticalAlignment="Top" 
+               Margin="0,5,90,0" 
+               Width="100"/>
+        <Frame x:Name="MainFrame"
+               Grid.Row="1"
+               NavigationUIVisibility="Hidden"
+               Navigated="MainFrame_Navigated"/>
+    </Grid>
+</Window>

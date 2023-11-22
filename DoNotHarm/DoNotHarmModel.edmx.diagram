@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40f863148c8e415082d82d28be7d5cca" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="DoNotHarmModel.Client" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.Countri" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.Insurance" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.Service" Width="1.5" PointX="8" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.SocialType" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.sysdiagram" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.User" Width="1.5" PointX="8" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.UsersService" Width="1.5" PointX="10.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="DoNotHarmModel.UserType" Width="1.5" PointX="5.75" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="DoNotHarmModel.FK_Clients_Countris1" ManuallyRouted="false" />
+        <AssociationConnector Association="DoNotHarmModel.FK_Clients_Insurances1" ManuallyRouted="false" />
+        <AssociationConnector Association="DoNotHarmModel.FK_Clients_SocialTypes1" ManuallyRouted="false" />
+        <AssociationConnector Association="DoNotHarmModel.FK_UsersServices_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="DoNotHarmModel.FK_Users_UserTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="DoNotHarmModel.FK_UsersServices_Users" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DoNotHarmModel.EnterStatus" Width="1.5" PointX="8" PointY="10.375" />
+        <EntityTypeShape EntityType="DoNotHarmModel.HistoryLogin" Width="1.5" PointX="10.25" PointY="6" />
+        <AssociationConnector Association="DoNotHarmModel.FK_HistoryLogin_EnterStatuses" />
+        <AssociationConnector Association="DoNotHarmModel.FK_HistoryLogin_Users" />
+        <EntityTypeShape EntityType="DoNotHarmModel.Order" Width="1.5" PointX="8" PointY="13.25" />
+        <EntityTypeShape EntityType="DoNotHarmModel.OrderService" Width="1.5" PointX="10.25" PointY="9.125" />
+        <AssociationConnector Association="DoNotHarmModel.FK_OrderService_Orders" />
+        <AssociationConnector Association="DoNotHarmModel.FK_OrderService_Services" />
+        <EntityTypeShape EntityType="DoNotHarmModel.OrderUser" Width="1.5" PointX="13.25" PointY="8" />
+        <AssociationConnector Association="DoNotHarmModel.FK_OrderUser_Orders" />
+        <AssociationConnector Association="DoNotHarmModel.FK_OrderUser_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
